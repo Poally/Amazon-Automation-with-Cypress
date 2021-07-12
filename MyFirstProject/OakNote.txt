@@ -1,0 +1,5 @@
+# Folder Compare with Robot Framework
+1.fixture >>> resource (file to use)
+2.plugin >>> Library (on top cypress)
+3.support >> custom command (command) global config (index)
+4.cypress.json >>> set url or port or variable
