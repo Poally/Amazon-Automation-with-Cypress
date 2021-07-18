@@ -1,5 +1,6 @@
 # Folder Compare with Robot Framework
-1.fixture >>> resource (file to use)
+1.fixture >>> resource (file to use) >>> variable in json 
+look at https://docs.cypress.io/api/commands/fixture#Timeouts
 2.plugin >>> Library (on top cypress)
 3.support >> custom command (command) global config (index)
 4.cypress.json >>> set url or port or variable
