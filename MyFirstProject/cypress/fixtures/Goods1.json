@@ -1,3 +1,4 @@
 {
-  "name": "Yamaha PSS A-50"
+  "name": "Yamaha PSS A-50",
+  "price_range": [120, 170]
 }
