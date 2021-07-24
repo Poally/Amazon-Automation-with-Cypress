@@ -20,17 +20,17 @@ it("Get Lowest Price Goods on Amazon as TestCase", function() {
         cy.get('#high-price').type(Goods1.price_range[1]).type('{enter}')
         cy.wait(500)
         
-        for(var i=0; i < Goods1.topxgoods;i++){
-            cy.xpath('//div[@class="s-main-slot s-result-list s-search-results sg-row"]//div[@data-component-type="s-search-result"][@data-index="'+String(i)+'"]').click()
-            //dont forget to store and file with url
-            cy.url().then(url => {
-                const getUrl = url
-                const numberG = 'good'+ String(i)
-                // cy.log('Current URL is : '+getUrl)
-                cy.writeFile('Goods1.json', { numberG : getUrl })
-            })
-            //end of adding url >>>> dont forget to runtest
-        }
+        // for(var i=0; i < Goods1.topxgoods;i++){
+        //     cy.xpath('//div[@class="s-main-slot s-result-list s-search-results sg-row"]//div[@data-component-type="s-search-result"][@data-index="'+String(i)+'"]').click()
+        //     //dont forget to store and file with url
+        //     cy.url().then(url => {
+        //         const getUrl = url
+        //         const numberG = 'good'+ String(i)
+        //         // cy.log('Current URL is : '+getUrl)
+        //         cy.writeFile('Goods1.json', { numberG : getUrl })
+        //     })
+        //     //end of adding url >>>> dont forget to runtest
+        // }
     })
     
     })
