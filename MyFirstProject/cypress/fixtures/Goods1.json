@@ -1,5 +1,7 @@
 {
-  "name": "Yamaha PSS A-50",
-  "price_range": [120, 170],
-  "topxgoods": 3
+  "name":"Yamaha PSS A-50",
+  "price_range" : [120,150],
+  "topxgoods" : 3
+
+
 }

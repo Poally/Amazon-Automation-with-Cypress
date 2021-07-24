@@ -27,9 +27,14 @@ it("Get Lowest Price Goods on Amazon as TestCase", function() {
                 const getUrl = url
                 const numberG = 'good'+ String(i)
                 // cy.log('Current URL is : '+getUrl)
-                cy.writeFile('Goods1.json', { numberG : getUrl })
+                cy.readFile('cypress/fixtures/Goods1Result.json').then((obj) => {
+                    obj.id = '1234'
+                    // write the merged object
+                    cy.writeFile('cypress/fixtures/Goods1Result.json', { numberG : getUrl },{"append": true})
+                  })  
             })
             //end of adding url >>>> dont forget to runtest
+            cy.go('back')
         }
     })
     
