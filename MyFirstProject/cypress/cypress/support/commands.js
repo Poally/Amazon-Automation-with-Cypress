@@ -23,3 +23,11 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('lighthouse', (url, output='html') => {
+    let cmd = `lighthouse ${url} --output ${output} --chrome-flags=\"--headless\"`
+    if (output === 'html') {
+      cmd += ' --output-path=./lhreport.html'
+    }
+    cy.exec(cmd);
+  });

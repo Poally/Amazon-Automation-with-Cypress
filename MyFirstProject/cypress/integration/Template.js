@@ -40,9 +40,14 @@ it("Get Lowest Price Goods on Amazon as TestCase", function() {
             })
             //end of adding url >>>> dont forget to runtest
             cy.go('back')
+            cy.lighthouse(url)
         }
     })
     
     })
 })
 
+it("should pass the audits", function () {
+    cy.lighthouse();
+    cy.pa11y();
+  });
